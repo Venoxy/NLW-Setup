@@ -1,0 +1,114 @@
+* {
+  margin: 0; /*******TODA MARGEM DO LAYOULT*********/
+  padding: 0; /*******DISTÂNCIA DENTRO DA BORDA*********/
+  box-sizing: border-box; /*************LARGURA A CAIXA**********/
+}
+
+body {
+  background-color: #09090a; /*** TODA COR DE FUNDO ***/
+  color: white; /***COR DO TEXTO****/
+
+  height: 100vh;
+}
+
+header {
+  display: flex; /*CABEÇALHO FLEXIVEL*/
+  align-items: center; /*CABEÇALHO CENTRALIZADO JUNTO COM FLEXIVEL*/
+  justify-content: space-between; /*ESPAÇO ENTRE ELES*/
+
+  padding: 48px;
+
+  position: fixed;
+  width: 100%;
+  background-color: #09090a;
+}
+
+button {
+  padding: 16px 24px; /* DISTANCIA DENTRO DA BORDA*/
+  border-radius: 8px; /***ARREDONDAMENTO DE BORDA*********/
+  border: 1px solid #8b5cf6; /*COR DA BARRA DA BORDA*/
+  background-color: transparent; /*COR DE FUNDO DA BORDA*/
+  color: white; /*COR DO TEXTO DENTRO DA BORDA*/
+
+  display: flex; /*VISUALIZAÇÃO FLEXÍVEL*/
+  align-items: center; /*DEIXANDO FLEXIVEL CENTRALIZADO*/
+  gap: 12px; /* USA QUANDO TEM FLEX E QUAL ESPAÇO ENTRE OS ELEMENTO*/
+
+  font-family: 'Inter'; /*QUAL FONTE DO GOOGLE TA USANDO*/
+  font-weight: 600; /*PESO DA FONTE*/
+  font-size: 16px; /*TAMANHO DA FONTE*/
+  line-height: 125%; /*ALTURA DE 125*/
+}
+
+#form-habits {
+  display: flex; /*formulario e emotions um do lado do outro*/
+  padding: 182px 48px 48px;
+  width: fit-content; /*ENCAIXANDO O CONTEÚDO*/
+}
+
+.habits {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.habit {
+  width: 64px;
+  height: 64px;
+
+  font-size: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column; /* DEIXANDO O DISPLAY EM COLUNAS UM ABAIXO DO OUTRO  */
+  gap: 24px;
+}
+
+.day div {
+  margin-bottom: 8px;
+
+  font-family: 'Roboto Mono';
+  font-size: 20px;
+  line-height: 125%;
+
+  color: #a1a1aa;
+
+  text-align: center;
+}
+
+input {
+  appearance: none; /* TIRANDO APARÊNCIA DO INPUT PRA FICAR SEM NADA SELECIONADO*/
+  -webkit-appearance: none; /* FUNCIONANDO OPÇÃO DE CIMA EM QUALQUER NAVEGADOR*/
+
+  width: 64px; /* TAMANHO DO INPUT*/
+  height: 64px; /* PESO DO INPUT*/
+
+  border: 2px solid #27272a; /* TAMANHO E COR DA BORDA*/
+  border-radius: 8px;
+
+  background: #18181b; /*COR DO FUNDO DO BOTÃO */
+}
+
+input:checked {
+  /* COMO SE FOSSE UM IF MAS USADO PRA QUANDO O INPUT FOR USADO*/
+  background: #8b5cf6; /*COR DO INPUT QUANDO FOR USADO*/
+  border: 2px solid #a78bfa; /* COMO O INPUT TEM BORDA, FOI PINTADO PRA NÃO FICAR DIFERENTE*/
+}
+
+@media (max-width: 570px) {
+  button div {
+    display: none;
+  }
+}
